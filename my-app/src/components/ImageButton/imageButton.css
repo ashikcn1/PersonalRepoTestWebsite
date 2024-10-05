@@ -1,0 +1,25 @@
+.img-btn img {
+  object-fit: fill;
+  width: 100%;
+}
+.img-btn {
+  max-width: 380px;
+  margin: 5px;
+  cursor: pointer;
+  padding-top: 55px;
+}
+
+.img-btn:hover {
+  margin-top: 0px;
+}
+
+.content {
+  font-family: garamond;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.date{
+  font-family: garamond;
+  font-size: 14px;
+}
