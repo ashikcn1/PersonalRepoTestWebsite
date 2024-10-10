@@ -2,30 +2,55 @@ import { useState } from "react";
 import AlienIcon from "../Icon/Assets/alien-svgrepo-com.svg";
 import "./header.css";
 import Icon from "../Icon/Icon";
+import { Link } from "react-router-dom";
 const moreOptions = [
   {
     name: "About Us",
+    onclick: () => {
+      <Link to={"/aboutus"}></Link>;
+    },
   },
   {
     name: "Vision",
+    onclick: () => {
+      <Link to={"/aboutus"}></Link>;
+    },
   },
   {
     name: "Mission",
+    onclick: () => {
+      <Link to={"/aboutus"}></Link>;
+    },
   },
   {
     name: "Directors",
+    onclick: () => {
+      <Link to={"/aboutus"}></Link>;
+    },
   },
   {
     name: "Others",
+    onclick: () => {
+      <Link to={"/aboutus"}></Link>;
+    },
   },
   {
     name: "Address",
+    onclick: () => {
+      <Link to={"/aboutus"}></Link>;
+    },
   },
   {
     name: "Social Media",
+    onclick: () => {
+      <Link to={"/aboutus"}></Link>;
+    },
   },
   {
     name: "Contacts",
+    onclick: () => {
+      <Link to={"/aboutus"}></Link>;
+    },
   },
 ];
 function Header() {
@@ -61,7 +86,9 @@ function Header() {
       {openMoreMenu && (
         <div className="more-menu">
           {moreOptions.map((option) => (
-            <div className="more-options">{option.name}</div>
+            <div className="more-options" onClick={option.onclick}>
+              {option.name}
+            </div>
           ))}
         </div>
       )}

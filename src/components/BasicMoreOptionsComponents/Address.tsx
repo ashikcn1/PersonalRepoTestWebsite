@@ -9,13 +9,17 @@ function Address({
     broaderAddress: string;
   }[];
 }) {
-  return addresses.map((address) => {
+  return (
     <div>
-      <div className="location">{address.location}</div>
-      <div className="local-area">{address.localAddress}</div>
-      <div className="broader-area">{address.broaderAddress}</div>
-    </div>;
-  });
+      {addresses.map((address) => (
+        <div>
+          <div className="location">{address.location}</div>
+          <div className="local-area">{address.localAddress}</div>
+          <div className="broader-area">{address.broaderAddress}</div>
+        </div>
+      ))}
+    </div>
+  );
 }
 
 export default Address;
