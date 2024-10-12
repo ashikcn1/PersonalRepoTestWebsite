@@ -15,6 +15,7 @@
   justify-content: space-around;
 }
 
-.default-body{
+.default-body {
   padding: 20px;
+  padding-top: 60px;
 }

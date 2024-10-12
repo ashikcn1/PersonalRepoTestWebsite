@@ -4,9 +4,8 @@
 }
 .img-btn {
   max-width: 380px;
-  margin: 5px;
+  margin: 15px;
   cursor: pointer;
-  padding-top: 55px;
 }
 
 .img-btn:hover {

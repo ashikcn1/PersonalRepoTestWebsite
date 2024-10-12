@@ -1,3 +1,5 @@
+import './commonMoreOptionsStyle.css'
+
 function Project({
   imageSrc,
   description,

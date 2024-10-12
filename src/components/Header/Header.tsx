@@ -1,59 +1,62 @@
 import { useState } from "react";
-import AlienIcon from "../Icon/Assets/alien-svgrepo-com.svg";
+import AlienIcon from "../Icon/Assets/logo.png";
 import "./header.css";
 import Icon from "../Icon/Icon";
-import { Link } from "react-router-dom";
-const moreOptions = [
-  {
-    name: "About Us",
-    onclick: () => {
-      <Link to={"/aboutus"}></Link>;
-    },
-  },
-  {
-    name: "Vision",
-    onclick: () => {
-      <Link to={"/aboutus"}></Link>;
-    },
-  },
-  {
-    name: "Mission",
-    onclick: () => {
-      <Link to={"/aboutus"}></Link>;
-    },
-  },
-  {
-    name: "Directors",
-    onclick: () => {
-      <Link to={"/aboutus"}></Link>;
-    },
-  },
-  {
-    name: "Others",
-    onclick: () => {
-      <Link to={"/aboutus"}></Link>;
-    },
-  },
-  {
-    name: "Address",
-    onclick: () => {
-      <Link to={"/aboutus"}></Link>;
-    },
-  },
-  {
-    name: "Social Media",
-    onclick: () => {
-      <Link to={"/aboutus"}></Link>;
-    },
-  },
-  {
-    name: "Contacts",
-    onclick: () => {
-      <Link to={"/aboutus"}></Link>;
-    },
-  },
-];
+import { useNavigate } from "react-router-dom";
+
 function Header() {
+  const navigate = useNavigate()
+  const moreOptions = [
+    {
+      name: "About Us",
+      onclick: () => {
+        navigate('/aboutus')
+      },
+    },
+    {
+      name: "Vision",
+      onclick: () => {
+        navigate('/vision')
+      },
+    },
+    {
+      name: "Mission",
+      onclick: () => {
+        navigate('/mission')
+      },
+    },
+    {
+      name: "Directors",
+      onclick: () => {
+        navigate('/directors')
+      },
+    },
+    {
+      name: "Others",
+      onclick: () => {
+        navigate('/others')
+      },
+    },
+    {
+      name: "Address",
+      onclick: () => {
+        navigate('/address')
+      },
+    },
+    {
+      name: "Social Media",
+      onclick: () => {
+        navigate('/socialmedia')
+      },
+    },
+    {
+      name: "Contacts",
+      onclick: () => {
+        navigate('/contacts')
+      },
+    },
+  ];
+
   const [openMoreMenu, setOpenMoreMenu] = useState(false);
 
   const onOutsideClickListener = (evt: any) => {
@@ -72,7 +75,7 @@ function Header() {
           <div className="company-icon">
             <Icon icon={AlienIcon} width="20"></Icon>
           </div>
-          <div className="company-name">Company Name</div>
+          <div className="company-name">JD CORP</div>
         </div>
         <button
           className="more-button"

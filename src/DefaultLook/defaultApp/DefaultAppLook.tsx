@@ -10,6 +10,7 @@ import Contacts from "../../components/BasicMoreOptionsComponents/Contacts";
 import Persons from "../../components/BasicMoreOptionsComponents/Persons";
 import SocialMedia from "../../components/BasicMoreOptionsComponents/SocialMedia";
 import Address from "../../components/BasicMoreOptionsComponents/Address";
+import Footer from "../../components/BasicMoreOptionsComponents/Footer/Footer";
 
 const images = [
   {
@@ -67,11 +68,12 @@ images.forEach((image) => {
   const routePath = {
     path: image.routePath,
     element: (
-      <Project
+      <><div className="default-header">
+        <Header></Header>
+      </div><div className="default-body"> <Project
         imageSrc={image.imgSrc}
         description={image.content}
-        date={image.date}
-      />
+        date={image.date} /></div></>
     ),
   };
   imageRoutepaths.push(routePath);
@@ -80,90 +82,100 @@ images.forEach((image) => {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomeBodyComponent images={images} />,
+    element: <><div className="default-header">
+      <Header></Header>
+    </div><div className="default-body"> <HomeBodyComponent images={images} />    </div></>,
   },
   {
     path: "/aboutus",
-    element: <AboutUs />,
+    element: <><div className="default-header">
+      <Header></Header>
+    </div><div className="default-body"> <AboutUs />    </div></>,
   },
   {
     path: "/vision",
-    element: <Vision content="vision" />,
+    element: <><div className="default-header">
+      <Header></Header>
+    </div><div className="default-body"> <Vision content="vision" />    </div></>,
   },
   {
     path: "/mission",
-    element: <Vision content="mission" />,
+    element: <><div className="default-header">
+      <Header></Header>
+    </div><div className="default-body"> <Vision content="mission" /></div></>,
   },
   {
-    path: "/contact",
-    element: <Contacts />,
+    path: "/contacts",
+    element: <><div className="default-header">
+      <Header></Header>
+    </div><div className="default-body"><Contacts /></div></>,
   },
   {
     path: "/directors",
-    element: (
-      <Persons
-        persons={[
-          { name: "Ashik", role: "MD", place: "Kerala" },
-          { name: "Ashik", role: "MD", place: "Kerala" },
-        ]}
-      />
-    ),
+    element: <><div className="default-header">
+      <Header></Header>
+    </div><div className="default-body">
+        <Persons
+          persons={[
+            { name: "Ashik", role: "MD", place: "Kerala" },
+            { name: "Ashik", role: "MD", place: "Kerala" },
+          ]} />
+      </div></>,
   },
   {
     path: "/others",
-    element: (
-      <Persons
-        persons={[
-          { name: "Ashik", role: "MD", place: "Kerala" },
-          { name: "Ashik", role: "MD", place: "Kerala" },
-          { name: "Ashik", role: "MD", place: "Kerala" },
-        ]}
-      />
-    ),
+    element: <><div className="default-header">
+      <Header></Header>
+    </div><div className="default-body">
+        <Persons
+          persons={[
+            { name: "Ashik", role: "MD", place: "Kerala" },
+            { name: "Ashik", role: "MD", place: "Kerala" },
+            { name: "Ashik", role: "MD", place: "Kerala" },
+          ]} />
+
+      </div></>,
   },
   {
     path: "/socialmedia",
-    element: (
-      <SocialMedia
-        mediaHandle={[
-          { name: "Instagram", url: "abc@instagram.com" },
-          { name: "Telegram", url: "abc@instagram.com" },
-        ]}
-      />
-    ),
+    element: <><div className="default-header">
+      <Header></Header>
+    </div><div className="default-body">
+        <SocialMedia
+          mediaHandle={[
+            { name: "Instagram", url: "abc@instagram.com" },
+            { name: "Telegram", url: "abc@instagram.com" },
+          ]} />
+      </div></>,
   },
   {
     path: "/address",
-    element: (
-      <Address
-        addresses={[
-          {
-            localAddress: "sdhjds sdnds dsjhdsj",
-            broaderAddress: "xhvbzxhbhvzhx",
-            location: "Kerala",
-          },
-          {
-            localAddress: "sdhjds sdnds dsjhdsj",
-            broaderAddress: "xhvbzxhbhvzhx",
-            location: "Kerala",
-          },
-        ]}
-      />
-    ),
+    element: <><div className="default-header">
+      <Header></Header>
+    </div><div className="default-body">
+        <Address
+          addresses={[
+            {
+              localAddress: "sdhjds sdnds dsjhdsj",
+              broaderAddress: "xhvbzxhbhvzhx",
+              location: "Kerala",
+            },
+            {
+              localAddress: "sdhjds sdnds dsjhdsj",
+              broaderAddress: "xhvbzxhbhvzhx",
+              location: "Kerala",
+            },
+          ]} />
+      </div></>,
   },
   ...imageRoutepaths,
 ]);
 
 function DefaultAppLook() {
   return (
-    <div className="default-container">
-      <div className="default-header">
-        <Header></Header>
-      </div>
-      <div className="default-body">
-        <RouterProvider router={router}></RouterProvider>
-      </div>
-    </div>
+    <><div className="default-container">
+      <RouterProvider router={router}></RouterProvider>
+    </div></>
   );
 }
 

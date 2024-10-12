@@ -1,0 +1,21 @@
+.image-div img {
+    width: 80%;
+}
+
+.image-div {
+    display: flex;
+    justify-content: center;
+}
+
+.img-description {
+    font-family: garamond;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px;
+}
+
+.date {
+    font-family: garamond;
+    font-size: 16px;
+    margin: 10px;
+}
